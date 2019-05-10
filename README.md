@@ -1,11 +1,11 @@
 # mu-feed
 A MangaUpdates RSS feed generator
 
-One can self-host this on [now.sh](https://now.sh) with very little knowledge and use this to generate RSS feeds for [MangaUpdates](https://www.mangaupdates.com/)
+You can self-host this on [now.sh](https://now.sh) with very little knowledge and use this to generate RSS feeds for [MangaUpdates](https://www.mangaupdates.com/)
 
 ## Setup
 
-To use it, one should make their list public.
+To use it, you should make their list public.
 
 The settings I use on my reading list are below:
 
