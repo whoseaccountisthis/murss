@@ -21,7 +21,7 @@ Take note of the `?id=xxxx&list=xxxx` part for later
 
 Go to import a repository, as seen below:
 
-![](https://i.imgur.com/6WhK53g.png)
+![](https://i.imgur.com/suxe0Yy.png)
 
 Use the following url during import: `https://github.com/TSedlar/mu-feed.git`
 
