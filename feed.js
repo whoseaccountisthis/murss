@@ -29,7 +29,7 @@ function collectListData(id, list) {
   });
 }
 
-function createRSS(seriesList) {
+function createRSS(res, seriesList) {
   return new Promise((resolve, reject) => {
     rp(RSS_URL)
       .then(xml => {
@@ -41,6 +41,7 @@ function createRSS(seriesList) {
             result.rss.channel[0].item = items.filter(item =>
               seriesList.filter(i => item.title[0].includes(i.series)).length > 0
             );
+            res.setHeader('Content-Type', 'text/xml');
             resolve(js2xml.buildObject(result));
           }
         });
@@ -53,7 +54,7 @@ module.exports = (req, res) => {
   const { query } = parse(req.url, true);
   const { id, list } = query;
   collectListData(id, list)
-    .then(seriesList => createRSS(seriesList))
+    .then(seriesList => createRSS(res, seriesList))
     .then(rss => res.end(rss))
     .catch(err => res.end(err))
 };
